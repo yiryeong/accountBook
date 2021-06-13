@@ -1,0 +1,47 @@
+/* 스크롤 없애기 */
+html {
+    overflow:hidden;
+}
+
+.addPop_wrapper{
+    width : 95%;
+}
+
+.addPop_tableTr{
+    text-align : right;
+}
+
+table {
+    margin: auto;
+    width : 95%;
+}
+
+table, td, th {
+    border : 5px solid white;
+};
+
+/* 버튼 스타일 */
+.addPop_button input
+{
+   padding: 2px;
+   margin: 0px 3px;
+   width : 60px;
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+.addPop_button input:hover{
+    color: #93a2ad;
+}
+
+/* input 입력창 스타일 */
+input[type=text]{
+    border : 2px solid skyblue;
+    border-radius : 10px;
+    height : 20px ;
+    width : 180px;
+}
+
+
+select.category:hover {
+    border : 2px solid blue;
+}

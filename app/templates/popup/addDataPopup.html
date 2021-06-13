@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mainStyle.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/popupStyle.css') }}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Pen+Script&family=Single+Day&display=swap" rel="stylesheet">
+	<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div class="addPop_wrapper">
+        <form id="addForm">
+            <table border="1" class="table">
+                <tr>
+                    <th class="addPop_tableTr">날짜선택</th>
+                    <td><input type='date' id="addPop_selectDay"/></td>
+                </tr>
+                <tr>
+                    <th class="addPop_tableTr">카테고리선택</th>
+                    <td><select id="addPop_category" class="category" style="width: 100px">
+                            <option value="생활용품"> 생활용품 </option>
+                            <option value="화장품"> 화장품 </option>
+                            <option value="옷"> 옷 </option>
+                            <option value="전자제품"> 전자제품 </option>
+                            <option value="기타"> 기타 </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="addPop_tableTr"><text style="color: red;">* </text>상품명</th>
+                    <td><input type="text" placeholder="상품명을 입력해주세요." id="addPop_productName"/></td>
+                </tr>
+                <tr>
+                    <th class="addPop_tableTr"><text style="color: red;">* </text>구매갯수</th>
+                    <td><input type="number" placeholder="구매갯수를 입력해주세요." id="addPop_count" value="1" min="1"/></td>
+                </tr>
+                <tr>
+                    <th class="addPop_tableTr"><text style="color: red;">* </text>총금액</th>
+                    <td><input type="text" placeholder="총금액을 입력해주세요.(,없이 숫자만)" id="addPop_price"/></td>
+                </tr>
+                <tr>
+                    <th class="addPop_tableTr">구매처</th>
+                    <td><input type="text" placeholder="구매처를 입력해주세요." id="addPop_place"/></td>
+                </tr>
+            </table>
+            <div class="addPop_button" style="float : right;"><br>
+                <input type="submit" value="{{ title }}" onclick="{{ clickFunction }}">
+                <input type="reset" value="취소" onclick="window.close();">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

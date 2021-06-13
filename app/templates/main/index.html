@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mainStyle.css') }}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Pen+Script&family=Single+Day&display=swap" rel="stylesheet">
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+    <title>^부자되세요^</title>
+</head>
+<body class="body">
+    <header>
+    	 <h1 class="header-text" onclick="location.reload()">부자됩시당~^^</h1>
+    </header>
+    <nav>
+    	<ul>
+    		<li>
+    			<form class="dateForm" method="post">
+		        	<input type='date' id='selectDay'/>
+		        	<input type='search' name='keyword'>
+		        	<button class="button" onsubmit=""> Search </button>
+		    	</form>
+    		</li>
+    		<li class="navButton">
+    			<button class="button" onclick="showAddPopup();">추가</button>
+		    	<button class="button" onclick="alert('선택삭제')">선택삭제</button>
+		    	<button class="button" onclick="alert('카테고리관리')">카테고리관리</button>
+    		</li>
+    	</ul>
+    </nav>
+    <section class="content">
+		<div>
+			<ul class="listUl">
+				<li class="fl tc title t_line checkAll"><input type="checkbox" id="checkboxAll"></li>
+				<li class="fl tc title t_line dateLi">날짜</li>
+				<li class="fl tc title t_line categoryLi">카테고리</li>
+				<li class="fl tc title t_line nameLi">상품명</li>
+				<li class="fl tc title t_line countLi">구매갯수</li>
+				<li class="fl tc title t_line priceLi">총금액</li>
+				<li class="fl tc title t_line contentsLi">구매처</li>
+				<li class="fl tc title t_line buttonLi">버튼</li>
+			</ul>
+		</div>
+		<div class ="item_list" id="item_list">
+		</div>
+	</section>
+    <footer>
+		<div id="paging"></div>
+	</footer>
+</body>
+</html>

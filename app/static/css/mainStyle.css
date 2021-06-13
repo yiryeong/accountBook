@@ -1,0 +1,139 @@
+body {
+    width: 100%;
+    height: 100%
+    margin: 0 auto;
+    background-color: white;
+}
+
+/* 헤어영역 */
+header {
+    width: 100%;
+    height: 30%;
+    background-color: FloralWhite;
+    border-bottom: 8px solid white;
+}
+.header-text {
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    padding: 30px 0px 0px 0px
+}
+
+/* 검색/버튼 영역 */
+nav {
+    width: 100%;
+    height: 20%;
+    background-color: green;
+    border-bottom: 3px solid white;
+}
+nav ul{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+nav ul li {
+    display: inline;
+    padding : 2px 10px 2px 5px;
+    float: left;
+}
+.navButton {
+    float: right;
+    padding : 4px 0px 0px 0px;
+}
+.searchSelect {
+    margin : 2px;
+    padding : 2px 15px 2px 15px ;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    height : 25px;
+    text-align : center;
+}
+.searchSelect:hover {
+    border: 2px solid blue;
+}
+input[type=search]{
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    height: 25px;
+}
+input[type=search]:hover{
+    border: 2px solid blue;
+}
+input[type=date]:hover{
+    border: 2px solid blue;
+}
+input[type=text]:hover{
+    border: 2px solid blue;
+}
+
+/* section 영역 */
+.content {
+     float: left;
+     width: 100%;
+     height: 60%;
+     border-bottom: 8px solid white;
+}
+
+/* 리스트 공통옵션 */
+.listUl {
+    list-style:none;
+    padding-inline-start: 0px;
+ }
+.fl { float:left; }
+.tc { text-align:center; }
+
+.checkAll, .checkbox { width: 4% }
+.dateLi, .categoryLi, .contentsLi, .countLi, .nameLi, .priceLi { width:12%; }
+.buttonLi { width:20%; }
+
+
+/* 리스트 영역 */
+.title {
+	height: 80%;
+	line-height: 150%;
+	background: LightSkyBlue;
+	font-weight: bold;
+}
+.t_line {
+    border-right:solid 1px black;
+    border-bottom:solid 1px black;
+}
+.list {
+	height:100%;
+	line-height: 150%;
+	background: AliceBlue;
+	padding: 3px 0px 3px 0px;
+}
+
+/* 페이징 */
+footer {
+     clear: both;
+     width: 100%;
+     height: 10%;
+     text-align : center;
+     border-bottom: 8px solid white;
+}
+
+/* 버튼 스타일 */
+.button:hover {
+    color:white;
+    background-color: blue;
+}
+.listButton:hover {
+    color:white;
+    background-color: blue;
+}
+.button, .listButton {
+    background : white;
+    border: 1px solid #aaa;
+    border-radius : 10px;
+    padding : 2px 15px 2px 15px;
+}
+.listButton {
+    border : 1px;
+}
+
+/* 폰트 변경 */
+* {
+    font-family: 'Single Day', cursive;
+}
