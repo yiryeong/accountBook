@@ -1,8 +1,9 @@
 body {
     width: 100%;
-    height: 100%
-    margin: 0 auto;
-    background-color: white;
+    height: 100%;
+    margin: 0px;
+    min-width : 800px;
+    background-color: red;
 }
 
 /* 헤어영역 */
@@ -23,68 +24,41 @@ header {
 nav {
     width: 100%;
     height: 20%;
-    background-color: green;
     border-bottom: 3px solid white;
 }
-nav ul{
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-}
-nav ul li {
-    display: inline;
-    padding : 2px 10px 2px 5px;
-    float: left;
-}
-.navButton {
-    float: right;
-    padding : 4px 0px 0px 0px;
-}
-.searchSelect {
-    margin : 2px;
-    padding : 2px 15px 2px 15px ;
-    border-radius: 10px;
-    border: 1px solid #aaa;
-    height : 25px;
-    text-align : center;
-}
-.searchSelect:hover {
-    border: 2px solid blue;
-}
-input[type=search]{
+
+.navDiv input {
     border: 1px solid #aaa;
     border-radius: 10px;
     height: 25px;
 }
-input[type=search]:hover{
+.navDiv input:hover {
     border: 2px solid blue;
 }
-input[type=date]:hover{
-    border: 2px solid blue;
-}
-input[type=text]:hover{
-    border: 2px solid blue;
+
+.navButton{
+    float: right;
+    padding : 4px 0px 0px 0px;
 }
 
 /* section 영역 */
 .content {
-     float: left;
      width: 100%;
-     height: 60%;
-     border-bottom: 8px solid white;
+     height: 40%;
 }
 
 /* 리스트 공통옵션 */
 .listUl {
+    width: 100%;
     list-style:none;
     padding-inline-start: 0px;
  }
 .fl { float:left; }
 .tc { text-align:center; }
 
-.checkAll, .checkbox { width: 4% }
+.checkAll, .checkbox { width: 5% }
 .dateLi, .categoryLi, .contentsLi, .countLi, .nameLi, .priceLi { width:12%; }
-.buttonLi { width:20%; }
+.buttonLi { width:22%; }
 
 
 /* 리스트 영역 */

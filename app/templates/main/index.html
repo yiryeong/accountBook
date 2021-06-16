@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta  name="'viewport" content="width=device-width, initial-scale=1.0">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mainStyle.css') }}">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,20 +16,16 @@
     	 <h1 class="header-text" onclick="location.reload()">부자됩시당~^^</h1>
     </header>
     <nav>
-    	<ul>
-    		<li>
-    			<form class="dateForm" method="post">
-		        	<input type='date' id='selectDay'/>
-		        	<input type='search' name='keyword'>
-		        	<button class="button" onsubmit=""> Search </button>
-		    	</form>
-    		</li>
-    		<li class="navButton">
-    			<button class="button" onclick="showAddPopup();">추가</button>
-		    	<button class="button" onclick="alert('선택삭제')">선택삭제</button>
-		    	<button class="button" onclick="alert('카테고리관리')">카테고리관리</button>
-    		</li>
-    	</ul>
+		<div class="navDiv">
+			<input type='date' id='selectDay'/>
+			<input type='search' name='keyword'>
+			<button class="button" onclick="searchData();"> Search </button>
+			<div class="navButton">
+				<button class="button" onclick="showAddPopup();">추가</button>
+				<button class="button" onclick="alert('선택삭제')">선택삭제</button>
+				<button class="button" onclick="alert('카테고리관리')">카테고리관리</button>
+			</div>
+		</div>
     </nav>
     <section class="content">
 		<div>
