@@ -56,7 +56,7 @@ nav {
 .fl { float:left; }
 .tc { text-align:center; }
 
-.checkAll, .checkbox { width: 5% }
+.checkAll, .checkbox { width: 4% }
 .dateLi, .categoryLi, .contentsLi, .countLi, .nameLi, .priceLi { width:12%; }
 .buttonLi { width:22%; }
 
