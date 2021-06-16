@@ -28,6 +28,7 @@ nav {
 
 .navDiv input {
     border: 1px solid #aaa;
+    background-color : white;
     border-radius: 10px;
 }
 .navDiv input:hover {
@@ -96,7 +97,6 @@ footer {
     background : white;
     border: 1px solid #aaa;
     border-radius : 10px;
-    padding : 2px 15px 2px 15px;
 }
 .listButton {
     border : 1px;
