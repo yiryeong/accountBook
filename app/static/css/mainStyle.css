@@ -1,7 +1,6 @@
 body {
     width: 100%;
     height: 100%;
-    margin: 0px;
     min-width : 800px;
     background-color: white;
 }
@@ -9,28 +8,27 @@ body {
 /* 헤어영역 */
 header {
     width: 100%;
-    height: 30%;
-    background-color: FloralWhite;
     border-bottom: 8px solid white;
 }
 .header-text {
     font-size: 40px;
     color: black;
     text-align: center;
-    padding: 30px 0px 0px 0px
+    padding: 30px 0px 0px 0px;
+}
+
+.mainDiv{
+    width: 100%;
 }
 
 /* 검색/버튼 영역 */
 nav {
     width: 100%;
-    height: 20%;
-    border-bottom: 3px solid white;
 }
 
 .navDiv input {
     border: 1px solid #aaa;
     border-radius: 10px;
-    height: 25px;
 }
 .navDiv input:hover {
     border: 2px solid blue;
@@ -38,13 +36,12 @@ nav {
 
 .navButton{
     float: right;
-    padding : 4px 0px 0px 0px;
+    margin-right: 35px;
 }
 
 /* section 영역 */
 .content {
      width: 100%;
-     height: 40%;
 }
 
 /* 리스트 공통옵션 */
@@ -56,7 +53,7 @@ nav {
 .fl { float:left; }
 .tc { text-align:center; }
 
-.checkAll, .checkbox { width: 4% }
+.checkAll, .checkbox { width: 5% }
 .dateLi, .categoryLi, .contentsLi, .countLi, .nameLi, .priceLi { width:12%; }
 .buttonLi { width:20%; }
 
@@ -69,7 +66,6 @@ nav {
 	font-weight: bold;
 }
 .t_line {
-    border-right:solid 1px black;
     border-bottom:solid 1px black;
 }
 .list {
@@ -83,9 +79,8 @@ nav {
 footer {
      clear: both;
      width: 100%;
-     height: 10%;
      text-align : center;
-     border-bottom: 8px solid white;
+     border-top: 10px solid white;
 }
 
 /* 버튼 스타일 */

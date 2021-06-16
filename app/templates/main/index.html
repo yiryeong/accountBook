@@ -15,34 +15,36 @@
     <header>
     	 <h1 class="header-text" onclick="location.reload()">부자됩시당~^^</h1>
     </header>
-    <nav>
-		<div class="navDiv">
-			<input type='date' id='selectDay'/>
-			<input type='search' name='keyword'>
-			<button class="button" onclick="searchData();"> Search </button>
-			<div class="navButton">
-				<button class="button" onclick="showAddPopup();">추가</button>
-				<button class="button" onclick="alert('선택삭제')">선택삭제</button>
-				<button class="button" onclick="alert('카테고리관리')">카테고리관리</button>
+	<div class="mainDiv">
+		<nav>
+			<div class="navDiv">
+				<input type='date' id='selectDay'/>
+				<input type='search' name='keyword'>
+				<button class="button" onclick="searchData();"> Search </button>
+				<div class="navButton">
+					<button class="button" onclick="showAddPopup();">추가</button>
+					<button class="button" onclick="alert('선택삭제')">선택삭제</button>
+					<button class="button" onclick="alert('카테고리관리')">카테고리관리</button>
+				</div>
 			</div>
-		</div>
-    </nav>
-    <section class="content">
-		<div>
-			<ul class="listUl">
-				<li class="fl tc title t_line checkAll"><input type="checkbox" id="checkboxAll"></li>
-				<li class="fl tc title t_line dateLi">날짜</li>
-				<li class="fl tc title t_line categoryLi">카테고리</li>
-				<li class="fl tc title t_line nameLi">상품명</li>
-				<li class="fl tc title t_line countLi">구매갯수</li>
-				<li class="fl tc title t_line priceLi">총금액</li>
-				<li class="fl tc title t_line contentsLi">구매처</li>
-				<li class="fl tc title t_line buttonLi">버튼</li>
-			</ul>
-		</div>
-		<div class ="item_list" id="item_list">
-		</div>
-	</section>
+		</nav>
+		<section class="content">
+			<div>
+				<ul class="listUl">
+					<li class="fl tc title t_line checkAll"><input type="checkbox" id="checkboxAll"></li>
+					<li class="fl tc title t_line dateLi">날짜</li>
+					<li class="fl tc title t_line categoryLi">카테고리</li>
+					<li class="fl tc title t_line nameLi">상품명</li>
+					<li class="fl tc title t_line countLi">구매갯수</li>
+					<li class="fl tc title t_line priceLi">총금액</li>
+					<li class="fl tc title t_line contentsLi">구매처</li>
+					<li class="fl tc title t_line buttonLi">버튼</li>
+				</ul>
+			</div>
+			<div class ="item_list" id="item_list">
+			</div>
+		</section>
+	</div>
     <footer>
 		<div id="paging"></div>
 	</footer>
