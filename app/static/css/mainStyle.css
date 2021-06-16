@@ -58,7 +58,7 @@ nav {
 
 .checkAll, .checkbox { width: 4% }
 .dateLi, .categoryLi, .contentsLi, .countLi, .nameLi, .priceLi { width:12%; }
-.buttonLi { width:22%; }
+.buttonLi { width:20%; }
 
 
 /* 리스트 영역 */
