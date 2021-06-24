@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta  name="'viewport" content="width=device-width, initial-scale=1.0">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mainStyle.css') }}">
+<!--	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mainStyle.css') }}">-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/popupStyle.css') }}">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Pen+Script&family=Single+Day&display=swap" rel="stylesheet">
@@ -46,7 +47,7 @@
                     <td><input type="text" placeholder="구매처를 입력해주세요." id="addPop_place"/></td>
                 </tr>
             </table>
-            <div class="addPop_button" style="float : right;"><br>
+            <div class="addPop_button"><br>
                 <input type="submit" value="{{ title }}" onclick="{{ clickFunction }}">
                 <input type="reset" value="취소" onclick="window.close();">
             </div>
