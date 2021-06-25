@@ -37,7 +37,26 @@ function getAllData(apiUrl){
 
 // 디비에서 입력내용 데이터 검색
 function searchData(){
-    alert('데이터 검색');
+    let selectDay = $('#selectDay').val();
+    let productName = $('#keyword').val();
+
+    postData = {
+            selectDay : selectDay,
+            productName : productName
+    };
+    $.ajax({
+        url : '/searchData',
+        type : 'POST',
+        data : JSON.stringify(postData),
+        contentType: 'application/json',
+        async: false,
+        success : function(data) {
+            console.log(data);
+        },
+        error :  function(data) {
+            console.log(data);
+        }
+    })
 }
 
 // 불러온 data 화면에 데이터 뿌려주기

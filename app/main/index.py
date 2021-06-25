@@ -50,9 +50,17 @@ def updateOK():
     return result
 
 
-# txt 파일에 데이터 삭제
+# 데이터 삭제
 @main.route('/delSelectData', methods=['POST'])
 def delData():
     jsonData = request.get_json()
     result = func.delData(jsonData)
+    return result
+
+
+# 데이터 검색
+@main.route('/searchData', methods=['POST'])
+def searchData():
+    jsonData = request.get_json()
+    result = func.searchData(jsonData)
     return result

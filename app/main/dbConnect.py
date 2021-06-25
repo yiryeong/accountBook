@@ -1,5 +1,6 @@
 import boto3
 from botocore.exceptions import ClientError
+from boto3.dynamodb.conditions import Key
 
 
 # aws dynamoDB 연결
@@ -113,3 +114,21 @@ def delDBData(data):
             raise
     else:
         return response
+
+
+# DB 데이터 검색
+def searchDBData(data):
+    dynamodb = connectDB()
+    table = dynamodb.Table('moneyList')
+
+    productName = data['productName']
+    selectDay = data['selectDay']
+
+    try:
+        response = table.query(
+            KeyConditionExpression=Key('selectDay').eq(selectDay) & Key('productName').eq(productName)
+        )
+    except ClientError as e:
+        return e.response['Error']['Message']
+    else:
+        return response['Items']

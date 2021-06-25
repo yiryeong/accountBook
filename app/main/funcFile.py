@@ -33,6 +33,12 @@ def getDbData():
     #     return res
 
 
+# 데이터 검색
+def searchData(data):
+    result = dbConnect.searchDBData(data)
+    return result
+
+
 # 데이터 추가 하기
 def addDataToDB(data):
     price = data['price']

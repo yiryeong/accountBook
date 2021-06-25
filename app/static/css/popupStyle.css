@@ -25,9 +25,9 @@ table, td, th {
 };
 
 /* 버튼 스타일 */
-.addPop_button{
-    width:20%;
+div.addPop_button{
     margin:auto;
+    width:20%;
 }
 input[type=submit],input[type=reset] {
     background : white;
@@ -51,10 +51,6 @@ input:hover{
 select.category:hover {
     border : 2px solid blue;
 }
-
-
-
-/*버튼*/
 
 
 /* 폰트 변경 */
