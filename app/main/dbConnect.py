@@ -128,7 +128,6 @@ def searchDBData(data):
         response = table.query(
             KeyConditionExpression=Key('selectDay').eq(selectDay) & Key('productName').eq(productName)
         )
+        return response
     except ClientError as e:
         return e.response['Error']['Message']
-    else:
-        return response['Items']
