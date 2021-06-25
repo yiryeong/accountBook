@@ -51,7 +51,9 @@ function searchData(){
         contentType: 'application/json',
         async: false,
         success : function(data) {
-            showList(data, 0);
+            resultData = JSON.parse(data);
+            showList(resultData, 0, 1);
+            paging(1, dataPerPage, pageCount, 1);
         },
         error :  function(data) {
             console.log(data);
@@ -59,8 +61,15 @@ function searchData(){
     })
 }
 
+function enterKey(){
+    if (window.event.keyCode == 13) {
+        searchData();
+    }
+}
+
+
 // 불러온 data 화면에 데이터 뿌려주기
-function showList(jsonData, startNum, endNum=jsonData.length){
+function showList(jsonData, startNum, endNum){
     let list = '';
     // 리스트 영역 가져온 데이터 뿌리기
     for (let i = startNum; i < endNum; i++) {

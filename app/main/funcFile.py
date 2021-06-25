@@ -35,7 +35,8 @@ def getDbData():
 
 # 데이터 검색
 def searchData(data):
-    result = dbConnect.searchDBData(data)
+    dbData = dbConnect.searchDBData(data)
+    result = json.dumps(dbData, ensure_ascii=False)
     return result
 
 
