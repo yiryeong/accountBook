@@ -52,7 +52,7 @@ function searchData(){
         async: false,
         success : function(data) {
             resultData = JSON.parse(data);
-            showList(resultData, 0, 1);
+            showList(resultData, 0, resultData.length);
             paging(1, dataPerPage, pageCount, 1);
         },
         error :  function(data) {
