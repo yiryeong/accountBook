@@ -51,7 +51,7 @@ function searchData(){
         contentType: 'application/json',
         async: false,
         success : function(data) {
-            showList(jsonData, 0);
+            showList(data, 0);
         },
         error :  function(data) {
             console.log(data);
