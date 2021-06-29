@@ -3,9 +3,11 @@ from flask import make_response
 from app.main import dbConnect as dbConnect
 
 
-# 디비 모든 데이터 가져오기
+# 디비 모든 데이터 오름차순으로 가져오기
 def getDbData():
     dbData = dbConnect.dbConnectToGetData()
+    dbData.sort(key=(lambda x: x['selectDay']))
+    # sortedData = sorted(dbData, key=(lambda x: x['selectDay']))
     result = json.dumps(dbData, ensure_ascii=False)
     return result
     # dict_data = {}
@@ -31,6 +33,15 @@ def getDbData():
     #         res.headers['Content-Type'] = 'application/json'
     #
     #     return res
+
+
+# 디비 모든 데이터 내림차순으로 가져오기
+def getAllDataDown():
+    dbData = dbConnect.dbConnectToGetData()
+    dbData.sort(key=(lambda x: x['selectDay']), reverse=True)
+    # sortedData = sorted(dbData, key=(lambda x: x['selectDay']), reverse=False)
+    result = json.dumps(dbData, ensure_ascii=False)
+    return result
 
 
 # 데이터 검색

@@ -1,5 +1,6 @@
 // list data 가져오기
 let getAllDataUrl='/getAllData';
+let getAllDataDown = '/getAllDataDown';
 // totalData : 총 데이터 수 , dataPerPage : 한 페이지에 나타낼 데이터 수 , pageCount : 한 화면에 나타낼 페이지 수
 let totalData, dataPerPage = 10, pageCount = 5;
 let data;
@@ -52,8 +53,15 @@ function searchData(){
         async: false,
         success : function(data) {
             resultData = JSON.parse(data);
-            showList(resultData, 0, resultData.length);
-            paging(1, dataPerPage, pageCount, 1);
+            console.log(resultData);
+            if(resultData == ''){
+                let list = '<ul class="listUl"><li class="fl tc nodata"> <span> 검색한 데이터는 존재하지 않습니다. </span> </li></ul>';
+                document.querySelector(".item_list").innerHTML = list;
+                paging(0, dataPerPage, pageCount, 0);
+            }else{
+                showList(resultData, 0, resultData.length);
+                paging(1, dataPerPage, pageCount, 1);
+            }
         },
         error :  function(data) {
             console.log(data);
@@ -212,4 +220,23 @@ function deleteRow(rowNum) {
             }
         })
     }
+}
+
+
+// sorting 오름차순
+function dateSortUp(){
+    showFirstPageList();
+}
+//내림차순
+function dateSortDown(){
+    let allData = getAllData(getAllDataDown);
+    let endNum = allData.length;
+
+    if(endNum > 10){
+        endNum = 10;
+    }
+    // 리스트 보여주기
+    showList(allData, 0, endNum);
+    // 페이징 처리  jsonData.length
+    paging(allData.length, dataPerPage, pageCount, 1);
 }

@@ -34,6 +34,13 @@ def getAllData():
     return result
 
 
+# json data 가져오기
+@main.route('/getAllDataDown', methods=['GET'])
+def getAllDataDown():
+    result = func.getAllDataDown()
+    return result
+
+
 # 데이터 추가 하기
 @main.route('/addOk', methods=['POST'])
 def addOk():
