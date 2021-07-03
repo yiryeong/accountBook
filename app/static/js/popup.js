@@ -1,3 +1,8 @@
+backURL = 'http://0.0.0.0:9000/api/';
+let addOkURL = backURL+'addOk';
+let updateOKURL = backURL+'updateOK';
+
+
 // 팝업창 중앙정렬
 function popupCenter(href, popupName, w, h) {
 	var xPos = (document.body.offsetWidth/2) - (w/2); // 가운데 정렬
@@ -14,7 +19,7 @@ function showAddPopup() {
 }
 // data 추가
 function addData(){
-    postData('/addOk', console.log('추가 실패'));
+    postData(addOkURL, console.log('추가 실패'));
 }
 
 
@@ -45,7 +50,7 @@ function setValue(win, rowNum){
 }
 // data 수정
 function updateData(){
-    postData('/updateOK', func());
+    postData(updateOKURL, func());
 }
 function func() {
     window.close();

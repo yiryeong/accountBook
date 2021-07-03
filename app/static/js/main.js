@@ -1,6 +1,9 @@
 // list data 가져오기
-let getAllDataUrl='/getAllData';
-let getAllDataDown = '/getAllDataDown';
+let backURL = 'http://0.0.0.0:9000/api/';
+let searchDataURL = backURL+'searchData';
+let deleteDataURL = backURL+'delSelectData';
+let getAllDataUrl= backURL+'getAllData';
+let getAllDataDown = backURL+'getAllDataDown';
 // totalData : 총 데이터 수 , dataPerPage : 한 페이지에 나타낼 데이터 수 , pageCount : 한 화면에 나타낼 페이지 수
 let totalData, dataPerPage = 10, pageCount = 5;
 let data;
@@ -46,7 +49,7 @@ function searchData(){
             productName : productName
     };
     $.ajax({
-        url : '/searchData',
+        url : searchDataURL,
         type : 'POST',
         data : JSON.stringify(postData),
         contentType: 'application/json',
@@ -205,7 +208,7 @@ function deleteRow(rowNum) {
         };
 
         $.ajax({
-            url : '/delSelectData',
+            url : deleteDataURL,
             type : 'POST',
             data : JSON.stringify(postData),
             contentType: 'application/json',
