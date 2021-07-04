@@ -1,5 +1,5 @@
 // list data 가져오기
-let backURL = 'http://0.0.0.0:9000/api/';
+let backURL = 'http://13.125.78.34:9000/api/';
 let searchDataURL = backURL+'searchData';
 let deleteDataURL = backURL+'delSelectData';
 let getAllDataUrl= backURL+'getAllData';
