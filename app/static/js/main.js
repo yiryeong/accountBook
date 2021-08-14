@@ -7,6 +7,7 @@ let getAllDataDown = backURL+'getAllDataDown';
 // totalData : 총 데이터 수 , dataPerPage : 한 페이지에 나타낼 데이터 수 , pageCount : 한 화면에 나타낼 페이지 수
 let totalData, dataPerPage = 10, pageCount = 5;
 let data;
+//v1 버전 테스트
 
 //자동실행 함수
 $(function(){
@@ -225,11 +226,11 @@ function deleteRow(rowNum) {
     }
 }
 
-
 // sorting 오름차순
 function dateSortUp(){
     showFirstPageList();
 }
+
 //내림차순
 function dateSortDown(){
     let allData = getAllData(getAllDataDown);
