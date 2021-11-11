@@ -1,4 +1,4 @@
-backURL = 'http://3.35.53.58:7000/api/';
+backURL = 'http://52.79.247.175:7000/api/';
 let addOkURL = backURL+'addOk';
 let updateOKURL = backURL+'updateOK';
 
